@@ -1,0 +1,32 @@
+.header-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;}
+
+    .nav-link {
+    font-size: 25px;
+    padding: 10px 35px;
+     color: #e5e7eb !important;
+     position: relative;
+    }
+    .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #4c1d95;
+  transition: width 0.3s ease;
+}
+    .nav-link:hover {
+    color: #4c1d95 !important;
+    } 
+    .nav-link:hover::after {
+  width: 100%;
+}
+    
+    body{
+    background: linear-gradient(135deg, #0f172a,#0f172a 40%, #4c1d95);
+    }
