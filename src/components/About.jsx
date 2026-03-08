@@ -2,6 +2,7 @@ import react from "react";
 
 function About() {
     return(
+    <section id="about" >
      <div className = "about">
         <h1>About Me</h1>
         <p>
@@ -18,6 +19,7 @@ full-stack web developer with a strong background in building scalable web appli
 
 
         </div>
+        </section>
     );
 }
 export default About;

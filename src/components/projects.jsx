@@ -4,7 +4,8 @@ import { SiPostgresql, SiExpress } from "react-icons/si";
 
 function Projects() {
   return (
-    <section className="projects section">
+
+    <section id="projects" className="projects section">
       <div className="container">
         <h2>Projects</h2>
 

@@ -16,18 +16,14 @@ function Hero() {
           </p>
 
           <div className="hero-buttons">
-            <a href="#projects" className="btn primary">
+            <a href="#projects " className="btn primary">
               View Projects
-            </a>
-
-            <a href="#contact" className="btn secondary">
-              Contact Me
             </a>
           </div>
         </div>
 
         <div className="hero-image">
-          <img src="assets/profile.jpg" alt="Simon profile" />
+          <img src="/img.jpeg" alt="Simon profile" />
         </div>
 
       </div>
