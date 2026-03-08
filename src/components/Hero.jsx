@@ -15,11 +15,7 @@ function Hero() {
             web technologies.
           </p>
 
-          <div className="hero-buttons">
-            <a href="#projects " className="btn primary">
-              View Projects
-            </a>
-          </div>
+        
         </div>
 
         <div className="hero-image">

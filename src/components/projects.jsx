@@ -13,7 +13,7 @@ function Projects() {
 
           {/* Project 1 */}
           <div className="project-card">
-            <h3>SDataCare</h3>
+            <h3>SdataCare</h3>
 
             <p>
               A web application for a data analysis company that presents
