@@ -528,3 +528,21 @@ section {
     margin: 0 15px;
   }
 }
+html, body {
+  overflow-x: hidden; /* hides any tiny horizontal scroll */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.about .container,
+.projects .project-grid,
+.contact-wrapper,
+.hero-container {
+  max-width: 100%;
+  padding-left: 10px;  /* adjust as needed */
+  padding-right: 10px; /* keep padding but prevent overflow */
+  box-sizing: border-box; /* ensures padding doesn't increase width */
+}
