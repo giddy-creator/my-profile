@@ -1,8 +1,12 @@
 .header-container{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
-    height: 11vh;
+    height: auto;
+    min-height: 70px;
+    justify-content: center;
+    gap: 20px;
   
   position: sticky;
   top: 0;
@@ -17,10 +21,11 @@
 
 
     .nav-link {
-    font-size: 25px;
-    padding: 10px 35px;
+    font-size: 18px;
+    padding: 0px 16px;
      color: #e5e7eb !important;
      position: relative;
+     white-space: nowrap;
     }
     .nav-link::after {
   content: "";
@@ -492,6 +497,7 @@ section {
   .hero-container {
     flex-direction: column;
     gap: 30px;
+    align-items: center;
   }
 
 
@@ -505,20 +511,29 @@ section {
   .header-container {
     flex-direction: column;
     gap: 12px;
-    padding: 6px 10px;
+    padding: 8px 15px;
+    align-items: center;
   }
 
-  .nav-link a,
+  
   .nav-link {
-    font-size: 1.2rem;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .nav-link a{
+    font-size: 0.9rem;
   }
 
-  /* About / Contact / Projects sections */
-  .about .container,
+  /*  / Projects sections */
+  
   .projects .project-grid
    {
-    padding: 0px;
-    margin: 0 2px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 15px;
+    margin: 0 auto;
   }
 
   .contact-wrapper {
@@ -540,8 +555,9 @@ body {
 .about .container,
 .contact-wrapper,
 .hero-container {
-  max-width: 100%;
-  padding-left: 10px;  /* adjust as needed */
-  padding-right: 10px; /* keep padding but prevent overflow */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 15px;  /* adjust as needed */
+  padding-right: 15px; /* keep padding but prevent overflow */
   box-sizing: border-box; /* ensures padding doesn't increase width */
 }
