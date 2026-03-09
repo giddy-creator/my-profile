@@ -14,7 +14,16 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Trigger button click animation
     setButtonClicked(true);
+
+    // Check if any field is empty
+    if (!formData.name || !formData.email || !formData.message) {
+      alert("Please fill out all fields before submitting.");
+      setTimeout(() => setButtonClicked(false), 300); // reset button color
+      return;
+    }
 
     try {
       const response = await fetch("https://formspree.io/f/mgonvjvp", {
@@ -25,7 +34,7 @@ function Contact() {
 
       if (response.ok) {
         alert("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", message: "" }); // clear form
       } else {
         alert("Oops! Something went wrong.");
       }
@@ -33,7 +42,8 @@ function Contact() {
       alert("Error sending message.");
     }
 
-    setTimeout(() => setButtonClicked(false), 200); // reset button class
+    // Reset button color after a short delay
+    setTimeout(() => setButtonClicked(false), 300);
   };
 
   return (
@@ -55,7 +65,6 @@ function Contact() {
             placeholder="Your Name"
             value={formData.name}
             onChange={handleChange}
-            required
           />
 
           <input
@@ -64,7 +73,6 @@ function Contact() {
             placeholder="Your Email"
             value={formData.email}
             onChange={handleChange}
-            required
           />
 
           <textarea
@@ -72,17 +80,15 @@ function Contact() {
             placeholder="Your Message"
             value={formData.message}
             onChange={handleChange}
-            required
           ></textarea>
 
           <button
-  type="submit"
-  className={buttonClicked ? "clicked" : ""}
-  onTouchStart={() => setButtonClicked(true)} // mobile tap feedback
->
-  Send Message
-</button>
-           
+            type="submit"
+            className={buttonClicked ? "clicked" : ""}
+            onTouchStart={() => setButtonClicked(true)} // mobile touch
+          >
+            Send Message
+          </button>
         </form>
       </div>
     </section>
