@@ -8,9 +8,9 @@
     justify-content: center;
     gap: 20px;
   
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 
   background: rgb(0, 0, 0); /* slightly transparent */
  
@@ -118,9 +118,9 @@
 }
 
 .about {
-  max-width: 1300px;
-  margin: 80px auto;
-  padding: 50px 40px;
+  
+  margin: 80px 10px;
+  padding: 40px 30px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 20px;
@@ -187,8 +187,8 @@
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 22px;
 
-  padding: 36px;
-  min-height: 260px;
+  padding: 24px;
+  min-height: 220px;
 
   box-shadow: 0 18px 40px rgba(0,0,0,0.35);
 
@@ -202,7 +202,7 @@
 /* HOVER EFFECT */
 
 .project-card:hover {
-  transform: translateY(-19px);
+  transform: translateY(-4px);
   box-shadow: 0 25px 50px rgba(0,0,0,0.45);
 }
 
@@ -317,7 +317,7 @@ section {
 /* Contact spacing (starts far below projects) */
 
 .contact {
-  margin-top: 120px;
+  margin-top: 130px;
   padding-top: 120px;
 }
 /* CONTACT SECTION */
@@ -325,7 +325,7 @@ section {
 .contact {
   position: relative;
   margin-top: 120px;
-  padding: 120px 0;
+  padding: 120px 20;
   overflow: hidden;
 
   background-image: radial-gradient(
@@ -367,8 +367,8 @@ section {
 /* TWO COLUMN LAYOUT */
 
 .contact-wrapper {
-  max-width: 1100px;
-  margin: auto;
+  max-width: 1000px;
+  margin: 80px 45px;
 
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -407,6 +407,7 @@ section {
   gap: 18px;
 
   padding: 40px;
+  margin: 20px 12px;
 
   background: rgba(149, 56, 9, 0.145);
   border: 1px solid rgba(255,255,255,0.08);
@@ -509,10 +510,9 @@ section {
 
   /* Navbar */
   .header-container {
-    flex-direction: column;
     gap: 12px;
     padding: 8px 15px;
-    align-items: center;
+  
   }
 
   
@@ -555,9 +555,9 @@ body {
 .about .container,
 .contact-wrapper,
 .hero-container {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding-left: 15px;  /* adjust as needed */
-  padding-right: 15px; /* keep padding but prevent overflow */
+  padding-left: auto;  /* adjust as needed */
+  padding-right: auto; /* keep padding but prevent overflow */
   box-sizing: border-box; /* ensures padding doesn't increase width */
 }
