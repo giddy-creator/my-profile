@@ -76,11 +76,13 @@ function Contact() {
           ></textarea>
 
           <button
-            type="submit"
-            className={buttonClicked ? "clicked" : ""}
-          >
-            Send Message
-          </button>
+  type="submit"
+  className={buttonClicked ? "clicked" : ""}
+  onTouchStart={() => setButtonClicked(true)} // mobile tap feedback
+>
+  Send Message
+</button>
+           
         </form>
       </div>
     </section>
